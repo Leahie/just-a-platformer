@@ -1,15 +1,15 @@
-var playerSize = 20;
+var playerSize = 20; // Size of Block 
 var blockSize = 50;
 function drawPlayer() {
   let canvas = id("playerLayer");
   let pL = canvas.getContext("2d");
-  canvas.width = levels[player.currentLevel].length * blockSize;
+  canvas.width = levels[player.currentLevel].length * blockSize; //calling player class 
   canvas.height = levels[player.currentLevel][0].length * blockSize;
-  pL.clearRect(0, 0, canvas.width, canvas.height);
-  let ratio = player.currentJumps / player.maxJumps;
+  pL.clearRect(0, 0, canvas.width, canvas.height); //Resets it?
+  let ratio = player.currentJumps / player.maxJumps; 
   if (player.maxJumps === Infinity) ratio = 1;
   if (player.maxJumps === 0) ratio = 0;
-  pL.fillStyle = `rgb(${255 - ratio * 255},0,${ratio * 255})`;
+  pL.fillStyle = `rgb(${255 - ratio * 255},0,${ratio * 255})`; // Changing the Color 
   if (options.darkMode)
     pL.fillStyle = `rgb(${255 - ratio * 255 * 0.75},${255 * 0.25},${
       ratio * 255 * 0.75 + 255 * 0.25

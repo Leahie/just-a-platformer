@@ -1,7 +1,7 @@
 var currentVersion = 0.3;
 var gameSpeed = 1;
 var player = {
-  spawnPoint: newSave(),
+  spawnPoint: newSave(),  
   isDead: false,
   spawnDelay: Math.floor((options.spawnDelay * 100) / 3),
   spawnTimer: Math.floor((options.spawnDelay * 100) / 3),
@@ -11,7 +11,7 @@ var player = {
   },
   x: 0,
   y: 0,
-  xv: 0,
+  xv: 0,  
   yv: 0,
   g: 325,
   canWalljump: false,
@@ -20,7 +20,7 @@ var player = {
   maxJumps: 1,
   moveSpeed: 600,
   triggers: [],
-  godMode: false,
+  godMode: true,
   reachedHub: false,
   deaths: 0,
   timePlayed: 0,
